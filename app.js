@@ -55,6 +55,7 @@ function main(req,res) {
             }
         });
     }
-        let srv = http.createServer(main);
+}
+    let srv = http.createServer(main);
 srv.listen(8080);
-console.log("Bezi na http://localhost:8080");}
+console.log("Bezi na http://localhost:8080");

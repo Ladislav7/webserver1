@@ -6,9 +6,19 @@
     <script>
         const HOST = window.location.protocol + "//" + window.location.hostname + ((window.location.port) ? ":" + window.location.port : "");
         function odesli() {
-            let v = document.getElementById("zprava").value; //nacteni zpravy
             let n = document.getElementById("prezdivka").value;
+            if (n == ""){
+                alert("Nickname is not defined");
+                return;
+            }
+
+            let v = document.getElementById("zprava").value; //nacteni zpravy
             document.getElementById("zprava").value = ""; //vymazani textu zpravu z inputu
+            if (v == ""){
+                alert("Message is not defined");
+                return;
+            }
+
             let url = HOST+"/chat/add";
             let body = {};
             body.msg = v;
